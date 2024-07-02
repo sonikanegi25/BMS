@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Details</title>
+	<link type="text/css" rel="stylesheet" href="bms.css">
+    <script>
+    
+
+        function viewDetails() {
+            var username = sessionStorage.getItem('username');
+            var email = sessionStorage.getItem('email');
+
+         
+            document.getElementById('detailsUsername').textContent = username;
+            document.getElementById('detailsEmail').textContent = email;
+
+         
+            document.getElementById('detailsContainer').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    
+    <button type="button" onclick="viewDetails()">View Details</button>
+    
+    <div id="detailsContainer" style="display:none">
+        <h2>Your Account Details</h2>
+        <p><strong>Username:</strong> <span id="detailsUsername"></span></p>
+        <p><strong>Email:</strong> <span id="detailsEmail"></span></p>
+    </div>
+</body>
+</html>

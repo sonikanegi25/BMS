@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Registration</title>
+	<link type="text/css" rel="stylesheet" href="bms.css">
+    <script>
+        function register() {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+
+      
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('email', email);
+
+        
+        }
+    </script>
+</head>
+<body>
+    <h1 class="h">𝓐𝓬𝓬𝓸𝓾𝓷𝓽 𝓡𝓮𝓰𝓲𝓼𝓽𝓻𝓪𝓽𝓲𝓸𝓷</h1>
+    <form action="account.html" class="hi">
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required><br>
+        <input type="submit" value="Register" onclick="register()"></button>
+    </form>
+</body>
+</html>
